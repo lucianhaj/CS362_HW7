@@ -5,7 +5,7 @@ def fizznbuzz(n):
         return 4
     else:
         return 100
-
+#forgot to specify what the implementation was
 
 
 
