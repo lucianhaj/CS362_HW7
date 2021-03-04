@@ -18,6 +18,14 @@ class TestLeapYear(unittest.TestCase):
         self.assertEqual(LeapYear.leap(100), "Not a Leap Year!")
         self.assertEqual(LeapYear.leap(255), "Not a Leap Year!")
 
+    def test_divisible_by_400(self):
+        self.assertEqual(LeapYear.leap(2000), "Leap Year!")
+        self.assertEqual(LeapYear.leap(400), "Leap Year!")
+        self.assertEqual(LeapYear.leap(2012), "Leap Year!")
+        self.assertEqual(LeapYear.leap(1000), "Not a Leap Year!")
+        self.assertEqual(LeapYear.leap(500), "Not a Leap Year!")
+        self.assertEqual(LeapYear.leap(200), "Not a Leap Year!")
+
 
 
 
