@@ -5,11 +5,18 @@ import LeapYear
 class TestLeapYear(unittest.TestCase):
 
     def test_divisible_by_four(self):
-        self.assertEqual(LeapYear_TDD.leap(4), "Leap Year!")
-        self.assertEqual(LeapYear_TDD.leap(16), "Leap Year!")
-        self.assertEqual(LeapYear_TDD.leap(24), "Leap Year!")
-        self.assertEqual(LeapYear_TDD.leap(2), "Not a Leap Year!")
-        self.assertEqual(LeapYear_TDD.leap(0), "Not a Leap Year!")
+        self.assertEqual(LeapYear.leap(4), "Leap Year!")
+        self.assertEqual(LeapYear.leap(16), "Leap Year!")
+        self.assertEqual(LeapYear.leap(24), "Leap Year!")
+        self.assertEqual(LeapYear.leap(2), "Not a Leap Year!")
+        self.assertEqual(LeapYear.leap(0), "Not a Leap Year!")
+
+    def test_divisible_by_100(self):
+        self.assertEqual(LeapYear.leap(1000), "Not a Leap Year!")
+        self.assertEqual(LeapYear.leap(8), "Leap Year!")
+        self.assertEqual(LeapYear.leap(4), "Leap Year!")
+        self.assertEqual(LeapYear.leap(100), "Not a Leap Year!")
+        self.assertEqual(LeapYear.leap(255), "Not a Leap Year!")
 
 
 
